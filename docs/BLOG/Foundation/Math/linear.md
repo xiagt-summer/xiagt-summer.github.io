@@ -323,19 +323,7 @@ $\Longrightarrow \hat{\vec x}$ 是 $A^TA \vec x=A^T \vec v$ 的解
 
 若 $A \vec x=\vec b$ 无解, 将 $A^TA\hat{\vec x}=A^T \vec b$ 称为正规方程组. 解出 $\hat{\vec x}$, 得到 $\vec b$ 在 C(A) 上的投影 $\vec p=A\hat{\vec x}$
 
-## 15 Gram-Schmidt 正交化
-
-目标: 给定 $V\in \mathbb R^n$ 为一个子空间,$\vec v_1,\vec v_2,\cdots ,\vec v_k$ 是 $V$ 的一组基, 把它们化成一组正交的向量 $\vec w_1,\vec w_2,\cdots ,\vec w_k$, 满足:
-1. ${\vec w_i}^T\vec w_j=0,i\neq j$
-2. $L(\vec v_1,\vec v_2,\cdots ,\vec v_t)=L(\vec w_1,\vec w_2,\cdots ,\vec w_t),1\le t\le k$,$L(\vec v_1,\vec v_2,\cdots ,\vec v_t)$ 表示 $\vec v_1,\vec v_2,\cdots ,\vec v_t$ 生成的 $V$ 的子空间
-
 ### 正交化过程
-
-$$
-\vec w_1=\vec v_1 \\
-\vec w_2=\vec v_2-\frac{{\vec w_1}^T \vec v_2}{{\vec w_1}^T \vec w_1}\vec w_1 \\
-\vec w_3=\vec v_3-\frac{{\vec w_1}^T \vec v_3}{{\vec w_1}^T \vec w_1}\vec w_1-\frac{{\vec w_2}^T \vec v_3}{{\vec w_2}^T \vec w_2}\vec w_2
-$$
 
 再进行单位化 $\vec q_i=\frac{\vec w_i}{\left \| \vec w_i \right \|}$
 
